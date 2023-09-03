@@ -1,0 +1,19 @@
+<div style="border: 2px dashed red; padding: 10px 10px; text-align: center;">
+    <div style="text-align: center;;">
+        <h4 style="color:red">Micro-frontend Summary Component</h4>
+    </div>
+    <ng-container *ngIf="user$ | async as user">
+        <p-card header='Summary'>
+            <p class="m-0">
+                <ng-container *ngIf="selectedCharacter$ | async as char">
+                    <div>
+                        User: <span style="font-weight: 500; font-size: large;">{{user}}</span>
+                        <br>
+                        Selected Character is <span style="font-weight: 500; font-size: large;">{{char?.name}} </span>
+                    </div>
+                </ng-container>
+            </p>
+        </p-card>
+    </ng-container>
+
+</div>

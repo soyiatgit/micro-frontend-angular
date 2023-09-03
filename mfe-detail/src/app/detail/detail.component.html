@@ -1,0 +1,15 @@
+<div style="border: 2px dashed red; padding: 10px 10px;text-align: center;">
+    <div style="text-align: center;;">
+        <h4 style="color:red">Micro-frontend Detail Component</h4>
+    </div>
+    <ng-container *ngIf="user$ | async as user">
+        <div>
+            Hello {{user}}
+        </div>
+    </ng-container>
+    <div style="margin-top: 1rem;">Please select your character &nbsp;&nbsp;
+        <p-dropdown [options]="characters" [(ngModel)]="selectedCharacter" optionLabel="name"></p-dropdown>
+    </div>
+    <div style="margin-top: 1rem;"><p-button label="Continue" (onClick)="onContinueClick()"></p-button>
+    </div>
+</div>
